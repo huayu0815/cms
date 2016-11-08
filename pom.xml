@@ -2,19 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.jspxcms</groupId>
-	<artifactId>jspxcms</artifactId>
+	<groupId>com.carcms</groupId>
+	<artifactId>carcms</artifactId>
 	<version>6.5.2</version>
 	<packaging>war</packaging>
 
-	<name>Jspxcms</name>
-	<description>Jspxcms是灵活的、易扩展的、企业级开源网站内容管理系统，支持多组织、多站点、独立管理的网站群，支持MySQL、Oracle、SQLServer等数据库。</description>
-	<url>http://www.jspxcms.com/</url>
-	<inceptionYear>2011-2016</inceptionYear>
+	<name>carcms</name>
+	<description>carcms使用国内开源CMS系统jspxcms作为底层实现进行二次开发,尊重版权,感谢jspxcms系统开发者</description>
+	<url>http://www.6szhan.com/</url>
+	<inceptionYear>2016-2116</inceptionYear>
 
 	<organization>
-		<name>Jspxcms</name>
-		<url>http://www.jspxcms.com/</url>
+		<name>carcms</name>
+		<url>http://www.6szhan.com/</url>
 	</organization>
 
 	<properties>
