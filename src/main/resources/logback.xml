@@ -1,8 +1,28 @@
-<configuration>
-  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-    <encoder>
-      <pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</pattern>
-    </encoder>
-  </appender>
-  <root level="ERROR"><appender-ref ref="STDOUT"/></root>
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{40} [%file : %line] - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <!-- 日志文件-->
+    <appender name="serverLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/data/web/logs/server.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/data/web/logs/server.log.%d{yyyyMMddHH}</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{40} [%file : %line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="serverLog" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+
 </configuration>
